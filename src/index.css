@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --color-Dark-Blue: hsl(240, 38%, 20%);
+  --color-Grayish-Blue: hsl(240, 18%, 77%);
+
+  /* font */
+  --font-Inter: "Inter", sans-serf;
+}
