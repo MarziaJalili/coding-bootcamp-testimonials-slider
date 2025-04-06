@@ -26,7 +26,7 @@ function App() {
           />
 
           {/* toggle buttons... */}
-          <div className="flex justify-between space-x-12 absolute py-4 px-6 bg-white bottom-4 translate-x-[-50%] left-[50%] rounded-full">
+          <div className="flex justify-between space-x-12 absolute py-4 px-6 bg-white bottom-4 translate-x-[-50%] left-[50%] rounded-full  md:left-[32%] lg:bottom-14">
             <button
               id="prev"
               onClick={() => toggleUsers("prev")}
