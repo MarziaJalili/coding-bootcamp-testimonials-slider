@@ -11,13 +11,16 @@ function App() {
   };
 
   return (
-    <main className="font-Inter text-Dark-Blue bg-[url(../public/pattern-curve.svg)] h-[100vh] bg-no-repeat bg-position-[bottom_0_left_0] bg-size-[80%] grid place-items-center">
-      <article className="flex flex-col space-y-12 container mx-auto px-6">
-        <section className="relative bg-[url(../public/pattern-bg.svg)] p-10 bg-no-repeat bg-position-[center] bg-size-[100%]">
+    <main
+      className="font-Inter text-Dark-Blue bg-[url(../public/pattern-curve.svg)] h-[100vh] bg-no-repeat bg-position-[bottom_0_left_0] bg-size-[80%] grid place-items-center md:bg-size-[60%]
+    "
+    >
+      <article className="flex flex-col space-y-12 container mx-auto px-6 md:flex-row-reverse items-center lg:max-w-5xl">
+        <section className="relative bg-[url(../public/pattern-bg.svg)] p-10 bg-no-repeat bg-position-[center] bg-size-[100%] md:-ml-22">
           {/* user image */}
 
           <img
-            className="rounded-lg shadow-[0_30px_80px_-40px_hsl(245,50%,49%)]"
+            className="rounded-lg shadow-[0_30px_80px_-40px_hsl(245,50%,49%)] "
             src={item.img.src}
             alt={item.img.alt}
           />
@@ -30,7 +33,7 @@ function App() {
               aria-label="switches the slides"
               className="cursor-pointer hover:scale-120  transition-all duration-300 "
             >
-              <img className="" src="./icon-prev.svg" alt="icon-prev" />
+              <img src="./icon-prev.svg" alt="icon-prev" />
             </button>
             <button
               id="next"
@@ -43,12 +46,14 @@ function App() {
           </div>
         </section>
 
-        <div className="flex flex-col py-6 items-center text-center space-y-6 container mx-auto bg-[url(../public/pattern-quotes.svg)] bg-no-repeat bg-position-[center_top] bg-size-[20%]">
-          <p className="text-xl font-light">{item.paragraph}</p>
+        <div className="flex flex-col py-6 items-center text-center space-y-6 container mx-auto bg-[url(../public/pattern-quotes.svg)] bg-no-repeat bg-position-[center_top] bg-size-[20%] md:text-left md:items-start md:z-10 md:bg-position-[left_75px_top_10px] lg:bg-position-[left_75px_top_0] md:bg-size-[18%] md:py-10 md:max-w-sm lg:max-w-md">
+          <p className="text-xl font-light lg:text-2xl md:leading-10">
+            {item.paragraph}
+          </p>
 
           <strong className="text-lg">
             {item.name}
-            <span className="block text-Grayish-Blue font-light">
+            <span className="max-md:block md:ml-2 text-Grayish-Blue font-normal">
               {item.position}
             </span>
           </strong>
