@@ -20,7 +20,7 @@ function App() {
           {/* user image */}
 
           <img
-            className="rounded-lg shadow-[0_30px_80px_-40px_hsl(245,50%,49%)] "
+            className="rounded-lg shadow-[0_30px_80px_-40px_hsl(245,50%,49%)] lg:w-[90%]"
             src={item.img.src}
             alt={item.img.alt}
           />
