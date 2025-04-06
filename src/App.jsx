@@ -16,11 +16,11 @@ function App() {
     "
     >
       <article className="flex flex-col space-y-12 container mx-auto px-6 md:flex-row-reverse items-center lg:max-w-5xl">
-        <section className="relative bg-[url(../public/pattern-bg.svg)] p-10 bg-no-repeat bg-position-[center] bg-size-[100%] md:-ml-22">
+        <section className="relative bg-[url(../public/pattern-bg.svg)] p-10 bg-no-repeat bg-position-[center] bg-size-[100%] md:-ml-22 lg:-ml-30 lg:p-20">
           {/* user image */}
 
           <img
-            className="rounded-lg shadow-[0_30px_80px_-40px_hsl(245,50%,49%)] lg:w-[90%]"
+            className="rounded-lg shadow-[0_30px_80px_-40px_hsl(245,50%,49%)]"
             src={item.img.src}
             alt={item.img.alt}
           />
