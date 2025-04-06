@@ -2,6 +2,7 @@ import { useState } from "react";
 import data from "./data.js";
 
 function App() {
+  // determining the user...
   const [count, setCount] = useState(0);
   const item = data[count];
 
@@ -24,6 +25,7 @@ function App() {
           {/* toggle buttons... */}
           <div className="flex justify-between space-x-12 absolute py-4 px-6 bg-white bottom-4 translate-x-[-50%] left-[50%] rounded-full">
             <button
+              id="prev"
               onClick={() => toggleUsers("prev")}
               aria-label="switches the slides"
               className="cursor-pointer hover:scale-120  transition-all duration-300 "
@@ -31,6 +33,7 @@ function App() {
               <img className="" src="./icon-prev.svg" alt="icon-prev" />
             </button>
             <button
+              id="next"
               onClick={() => toggleUsers("next")}
               aria-label="switches the slides"
               className="cursor-pointer hover:scale-120 transition-all duration-300 "
