@@ -11,3 +11,34 @@
   /* font */
   --font-Inter: "Inter", sans-serf;
 }
+
+/* changing the selection color */
+::selection {
+  background-color: #e7e5f9;
+  color: var(--color-Dark-Blue);
+}
+
+body.dark {
+  background-color: #130e2b;
+
+  p {
+    color: var(--color-Grayish-Blue);
+  }
+
+  strong {
+    color: #7a4cf4;
+  }
+
+  .user-image {
+    box-shadow: 0 30px 80px -10px hsl(245, 50%, 49%);
+  }
+
+  main {
+    background-image: url("../public/dark-pattern-curve.svg");
+  }
+
+  section {
+    margin-left: -14px;
+    background-image: url("../public/dark-pattern-bg.svg");
+  }
+}

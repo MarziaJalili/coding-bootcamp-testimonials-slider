@@ -21,7 +21,7 @@ const ToggleButton = () => {
       onClick={changeMode}
     >
       <svg
-        fill={darkMode ? "#000" : "#2d314d"}
+        fill={darkMode ? "#babacf" : "#2d314d"}
         height="27"
         width="50"
         xmlns="http://www.w3.org/2000/svg"
