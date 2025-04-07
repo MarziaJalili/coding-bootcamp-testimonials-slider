@@ -64,6 +64,7 @@ function App() {
 
       <ToggleButton darkMode={darkMode} setDarkMode={setDarkMode} />
       <article className="flex flex-col space-y-12 container mx-auto px-6 md:flex-row-reverse items-center lg:max-w-5xl">
+        <h2 className="sr-only">The main content of the page</h2>
         <section className="relative bg-[url(../public/pattern-bg.svg)] p-10 bg-no-repeat bg-position-[center] bg-size-[100%] md:-ml-22 lg:-ml-30 lg:p-20">
           <h2 className="sr-only">The User image and Toggle Buttons</h2>
 
