@@ -60,7 +60,7 @@ function App() {
       className="font-Inter text-Dark-Blue bg-[url(../public/pattern-curve.svg)] h-[100vh] bg-no-repeat bg-position-[bottom_0_left_0] bg-size-[80%] grid place-items-center md:bg-size-[60%]
     "
     >
-      <h1 aria-label="Title of the page" className="hidden">
+      <h1 aria-label="Title of the page" className="sr-only">
         Coding BootCamp Testimonials Slider
       </h1>
 

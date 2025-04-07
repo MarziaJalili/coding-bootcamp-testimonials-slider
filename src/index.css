@@ -12,6 +12,19 @@
   --font-Inter: "Inter", sans-serf;
 }
 
+/* for screen readers only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap; /* Added for good measure */
+}
+
 /* changing the selection color */
 ::selection {
   background-color: #e7e5f9;
