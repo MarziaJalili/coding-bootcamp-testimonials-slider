@@ -21,18 +21,36 @@ function App() {
   });
 
   // GSAP animation...
-  useGSAP(() => {
-    gsap.from(".char", {
-      duration: 0.8,
-      opacity: 0,
-      scale: 0,
-      y: 80,
-      rotationX: 180,
-      transformOrigin: "0% 50% -50",
-      ease: "back",
-      stagger: 0.01,
-    });
-  }, [count]);
+  useGSAP(
+    () => {
+      // user testimonial
+      gsap.from(".char", {
+        duration: 1,
+        opacity: 0,
+        stagger: 0.01,
+      });
+
+      // user name
+      gsap.from(".user-name", {
+        y: 100,
+        scale: 0,
+      });
+
+      // user position
+      gsap.from(".user-position", {
+        y: 100,
+        delay: 0.1,
+        scale: 0,
+      });
+
+      // user image
+      gsap.from("img", {
+        y: 100,
+        ease: "power1.in",
+      });
+    },
+    { dependencies: [count], revertOnUpdate: true }
+  );
 
   return (
     <main
@@ -75,9 +93,9 @@ function App() {
             {chars}
           </p>
 
-          <strong className="text-lg ">
-            {item.name}
-            <span className="position max-md:block md:ml-2 text-Grayish-Blue font-normal">
+          <strong className="text-lg">
+            <span className="user-name inline-block">{item.name}</span>
+            <span className="user-position inline-block max-md:block md:ml-2 text-Grayish-Blue font-normal">
               {item.position}
             </span>
           </strong>
