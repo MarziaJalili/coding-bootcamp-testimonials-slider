@@ -1,7 +1,9 @@
 import { useState } from "react";
-import data from "./data.js";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+
+import data from "./data.js";
+import ToggleButton from "./ToggleButton.jsx";
 
 function App() {
   // determining the user...
@@ -44,7 +46,7 @@ function App() {
       });
 
       // user image
-      gsap.from("img", {
+      gsap.from(".user-image", {
         y: 100,
         ease: "power1.in",
       });
@@ -57,12 +59,13 @@ function App() {
       className="font-Inter text-Dark-Blue bg-[url(../public/pattern-curve.svg)] h-[100vh] bg-no-repeat bg-position-[bottom_0_left_0] bg-size-[80%] grid place-items-center md:bg-size-[60%]
     "
     >
+      <ToggleButton />
       <article className="flex flex-col space-y-12 container mx-auto px-6 md:flex-row-reverse items-center lg:max-w-5xl">
         <section className="relative bg-[url(../public/pattern-bg.svg)] p-10 bg-no-repeat bg-position-[center] bg-size-[100%] md:-ml-22 lg:-ml-30 lg:p-20">
           {/* user image */}
 
           <img
-            className="rounded-lg shadow-[0_30px_80px_-40px_hsl(245,50%,49%)]"
+            className="user-image rounded-lg shadow-[0_30px_80px_-40px_hsl(245,50%,49%)]"
             src={item.img.src}
             alt={item.img.alt}
           />
