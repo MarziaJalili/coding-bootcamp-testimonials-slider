@@ -8,6 +8,7 @@ import ToggleButton from "./ToggleButton.jsx";
 function App() {
   // determining the user...
   const [count, setCount] = useState(0);
+  const [darkMode, setDarkMode] = useState(false);
   const item = data[count];
 
   const toggleUsers = (button) => {
@@ -51,7 +52,7 @@ function App() {
         ease: "power1.in",
       });
     },
-    { dependencies: [count], revertOnUpdate: true }
+    { dependencies: [count || darkMode], revertOnUpdate: true }
   );
 
   return (
@@ -59,7 +60,7 @@ function App() {
       className="font-Inter text-Dark-Blue bg-[url(../public/pattern-curve.svg)] h-[100vh] bg-no-repeat bg-position-[bottom_0_left_0] bg-size-[80%] grid place-items-center md:bg-size-[60%]
     "
     >
-      <ToggleButton />
+      <ToggleButton darkMode={darkMode} setDarkMode={setDarkMode} />
       <article className="flex flex-col space-y-12 container mx-auto px-6 md:flex-row-reverse items-center lg:max-w-5xl">
         <section className="relative bg-[url(../public/pattern-bg.svg)] p-10 bg-no-repeat bg-position-[center] bg-size-[100%] md:-ml-22 lg:-ml-30 lg:p-20">
           {/* user image */}

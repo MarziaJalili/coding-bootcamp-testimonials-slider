@@ -18,6 +18,10 @@
   color: var(--color-Dark-Blue);
 }
 
+body {
+  transition: 1s;
+}
+
 body.dark {
   background-color: #130e2b;
 
@@ -38,7 +42,7 @@ body.dark {
   }
 
   section {
-    margin-left: -14px;
+    margin-left: -20px;
     background-image: url("../public/dark-pattern-bg.svg");
   }
 }
