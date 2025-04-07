@@ -38,6 +38,11 @@ body {
 body.dark {
   background-color: #130e2b;
 
+  ::selection {
+    background-color: #c5b0ff;
+    color: var(--color-Dark-Blue);
+  }
+
   p {
     color: var(--color-Grayish-Blue);
   }
