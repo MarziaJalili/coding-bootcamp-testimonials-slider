@@ -1,5 +1,7 @@
 import { useState } from "react";
 import data from "./data.js";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 function App() {
   // determining the user...
@@ -9,6 +11,28 @@ function App() {
   const toggleUsers = (button) => {
     button === "next" ? setCount(1) : setCount(0);
   };
+
+  const chars = item.paragraph.split("").map((char, index) => {
+    return (
+      <span key={index} className="char">
+        {char}
+      </span>
+    );
+  });
+
+  // GSAP animation...
+  useGSAP(() => {
+    gsap.from(".char", {
+      duration: 0.8,
+      opacity: 0,
+      scale: 0,
+      y: 80,
+      rotationX: 180,
+      transformOrigin: "0% 50% -50",
+      ease: "back",
+      stagger: 0.01,
+    });
+  }, [count]);
 
   return (
     <main
@@ -48,12 +72,12 @@ function App() {
 
         <div className="flex flex-col py-6 items-center text-center space-y-6 container mx-auto bg-[url(../public/pattern-quotes.svg)] bg-no-repeat bg-position-[center_top] bg-size-[20%] md:text-left md:items-start md:z-10 md:bg-position-[left_75px_top_10px] lg:bg-position-[left_75px_top_0] md:bg-size-[18%] md:py-10 md:max-w-sm lg:max-w-md">
           <p className="text-xl font-light lg:text-2xl md:leading-10">
-            {item.paragraph}
+            {chars}
           </p>
 
-          <strong className="text-lg">
+          <strong className="text-lg ">
             {item.name}
-            <span className="max-md:block md:ml-2 text-Grayish-Blue font-normal">
+            <span className="position max-md:block md:ml-2 text-Grayish-Blue font-normal">
               {item.position}
             </span>
           </strong>
