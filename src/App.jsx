@@ -52,8 +52,7 @@ function App() {
       gsap.from(".user-image", {
         y: 100,
         ease: "power1.in",
-        duration: 0.8,
-        opacity: 0.8,
+        duration: 0.6,
       });
     },
     { dependencies: [count || darkMode], revertOnUpdate: true }
