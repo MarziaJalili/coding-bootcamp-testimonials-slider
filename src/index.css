@@ -60,9 +60,9 @@ body.dark {
   }
 
   section {
-@media (min-width: 600px) {
-    margin-left: -20px;
-}
+    @media (min-width: 768px) {
+      margin-left: -20px;
+    }
     background-image: url("../public/dark-pattern-bg.svg");
   }
 }
