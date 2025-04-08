@@ -37,6 +37,7 @@ function App() {
       gsap.from(".user-name", {
         y: 100,
         scale: 0,
+        duration: 0.8,
       });
 
       // user position
@@ -44,12 +45,15 @@ function App() {
         y: 100,
         delay: 0.1,
         scale: 0,
+        duration: 0.8,
       });
 
       // user image
       gsap.from(".user-image", {
         y: 100,
         ease: "power1.in",
+        duration: 0.8,
+        opacity: 0.8,
       });
     },
     { dependencies: [count || darkMode], revertOnUpdate: true }
